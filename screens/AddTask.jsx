@@ -9,6 +9,7 @@ import 'react-native-get-random-values';
 import CategorysAdd from '../components/CategorysAdd';
 import PopUp from '../components/PopUp';
 import { addTask as styles } from '../style';
+import { getFormattedDate, getFormattedTime } from '../utilities';
 
 export default function AddTask() {
   const {
@@ -47,8 +48,8 @@ export default function AddTask() {
 
   const handlerSubmit = () => {
     if (name && hours && minutes && day && month && year) {
-      const date = `${day}/${month}/${year}`;
-      const time = `${hours}:${minutes}`;
+      const date = getFormattedDate(day, month, year);
+      const time = getFormattedTime(hours, minutes);
       dispatch(add({
         name, time, date, id: uuidv4(), category, isCompleted: false,
       }));
