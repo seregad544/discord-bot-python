@@ -1,8 +1,6 @@
 ## toDo
+![screens](/assets/screens.png)
 
-<image src="/assets/screen_3.jpg"  width="300">
-<image src="/assets/screen_2.jpg"  width="300">
-<image src="/assets/screen_4.jpg"  width="300">
 ### description:
 A simple to-do list for mobile platforms. The application has filtering by dates and categories. You can add and remove tasks and categories. Tasks have the status of execution.
 
