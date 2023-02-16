@@ -18,8 +18,8 @@ const compareTime = (first, second) => {
 };
 
 const compareDate = (first, second) => {
-  const [firstDay, firstMonth, firstYear] = first.split("/");
-  const [secondDay, secondMonth, secondYear] = second.split("/");
+  const [firstMonth, firstDay, firstYear] = first.split('/');
+  const [secondMonth, secondDay, secondYear] = second.split('/');
   let result;
   if (firstYear > secondYear) result = 1;
   else if (firstYear < secondYear) result = -1;
@@ -32,7 +32,7 @@ const compareDate = (first, second) => {
 };
 
 const isToday = (date) => {
-  const formatedDate = new Date(date.split("/").reverse().join("/"));
+  const formatedDate = new Date(date);
   const today = new Date();
   return formatedDate.toDateString() === today.toDateString();
 };

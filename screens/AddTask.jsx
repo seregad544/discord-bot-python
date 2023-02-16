@@ -47,7 +47,9 @@ export default function AddTask() {
   };
 
   const handlerSubmit = () => {
-    if (name && hours && minutes && day && month && year) {
+    if (month === '0' || day === '0') {
+      Alert.alert('Zero fields', 'Month and day fields cannot be equal to zero');
+    } else if (name && hours && minutes && day && month && year) {
       const date = getFormattedDate(day, month, year);
       const time = getFormattedTime(hours, minutes);
       dispatch(add({
